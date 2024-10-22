@@ -1,0 +1,105 @@
+body {
+    margin: 0;
+    font-family: 'Arial', sans-serif;
+    background-color: #cceeff;
+    overflow: hidden;
+}
+
+#welcome-screen {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    position: relative;
+    text-align: center;
+}
+
+.welcome-content {
+    z-index: 2;
+    background: rgba(255, 255, 255, 0.9);
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.5);
+    animation: fadeIn 1s;
+}
+
+#welcome-screen h1 {
+    color: #ff69b4;
+    font-size: 3.5em;
+    margin-bottom: 10px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.intro-text {
+    font-size: 1.5em;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+#enter-button {
+    background-color: #ff69b4;
+    color: white;
+    border: none;
+    padding: 15px 30px;
+    font-size: 1.2em;
+    cursor: pointer;
+    border-radius: 25px;
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.3);
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+#enter-button:hover {
+    background-color: #ff4d80;
+    transform: scale(1.05);
+}
+
+.photo-grid {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Fila de fotos */
+.photo-row {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-bottom: 20px;
+}
+
+.photo {
+    width: 300px;
+    height: 300px;
+    border-radius: 10px;
+    object-fit: cover;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s;
+}
+
+.photo:hover {
+    transform: scale(1.05);
+}
+
+.snoopy {
+    position: absolute;
+    width: 60px;
+    height: auto;
+    opacity: 0.7;
+}
+
+/* Animaciones */
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
